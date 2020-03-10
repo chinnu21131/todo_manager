@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
   def index
-    render plain: "Hello to rails! #{DateTime.now.to_s(:long)}"
+    render plain: Todo.all.to_a
   end
 end

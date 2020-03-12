@@ -12,4 +12,8 @@ class UsersController < ApplicationController
     new_user = User.create!(name: name, email: email, password: password)
     render plain: "user created with id #{new_user.id}"
   end
+
+  def login
+    render plain: User.where("email = ? and password = ?", params[:email], params[:password]).exists?
+  end
 end

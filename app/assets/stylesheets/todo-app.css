@@ -74,7 +74,7 @@ body {
   height: 16px;
 }
 .TodoItem-container:hover {
-  background-color: #F1EDF7;
+  background-color: rgb(224, 207, 247);
 }
 .TodoItem-delete > img {
   width: 16px;
@@ -93,5 +93,9 @@ body {
 }
 .TodoItem-dueDate {
   font-size: 10px;
-  color:  rgb(122, 61, 214);
+  color:  rgb(91, 32, 179);
+  margin-left: 10px;
+}
+.TodoItem-completedText {
+  text-decoration: line-through;
 }

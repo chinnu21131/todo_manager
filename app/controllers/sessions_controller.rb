@@ -5,9 +5,15 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
-      redirect_to todos_path
+      redirect_to "/"
     else
       render plain: "sign-in failure!"
     end
+  end
+
+  def destroy
+    session[:current_user_id] = nil
+    @current_user = nil
+    redirect_to "/"
   end
 end

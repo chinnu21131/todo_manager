@@ -7,3 +7,9 @@
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+.UserName {
+  font-size: 14px;
+  padding: 8px;
+  background-color: lightgray;
+}

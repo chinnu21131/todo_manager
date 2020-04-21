@@ -47,4 +47,8 @@ class Todo < ApplicationRecord
     todo.save
     return todo
   end
+
+  def self.of_user(user)
+    all.where(user_id: user.id)
+  end
 end
